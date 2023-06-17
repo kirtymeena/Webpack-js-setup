@@ -10,9 +10,9 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@300;400;500;700;900&display=swap"
             rel="stylesheet">
         <title>
-            Webpack App
+            <%= htmlWebpackPlugin.options.title %>
         </title>
-    <script defer src="bundleca7058fba3063addf36b.js"></script></head>
+    </head>
 
     <body>
         <section class="card__wrapper">
@@ -22,7 +22,8 @@
                         DAY
                     </div>
                     <div class="day__input">
-                        <input id="day" placeholder="DD" />
+                        <input id="day" placeholder="DD" type="tel" />
+                        <small id="dayError"></small>
                     </div>
                 </div>
                 <div class="inner__header">
@@ -30,7 +31,9 @@
                         MONTH
                     </div>
                     <div class="month__input">
-                        <input id="month" placeholder="MM" />
+                        <input id="month" placeholder="MM" type="tel" />
+                        <small id="monthError"></small>
+
                     </div>
                 </div>
                 <div class="inner__header">
@@ -38,13 +41,15 @@
                         YEAR
                     </div>
                     <div class="week__input">
-                        <input id="year" placeholder="YYYY" />
+                        <input id="year" placeholder="YYYY" type="tel" />
+                        <small id="yearError"></small>
+
                     </div>
                 </div>
             </div>
             <div class="card__seperator">
                 <div class="left__seperator"></div>
-                <div class="seperator__circle" tabindex="0" role="button">
+                <div class="seperator__circle" tabindex="0" role="button" id="btn" aria-pressed="false">
                     <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
                         <g fill="none" stroke="#FFF" stroke-width="2">
                             <path
@@ -55,7 +60,9 @@
                 <div class="right__seperator"></div>
             </div>
             <div class="result">
-
+                <p class="result-1"><span class="dash-1">- - </span> <span> years</span></span></p>
+                <p class="result-2"><span class="dash-2">- - </span> month</p>
+                <p class="result-3"><span class="dash-3">- - </span> days</p>
             </div>
         </section>
     </body>
